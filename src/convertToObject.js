@@ -8,8 +8,6 @@
 function convertToObject(sourceString) {
   const result = {};
 
-  // sourceString = sourceString.trim();
-
   const temp = sourceString.split(';').map((word) => {
     const [key, value] = word.split(':');
 
