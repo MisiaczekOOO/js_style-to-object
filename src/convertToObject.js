@@ -15,13 +15,13 @@ function convertToObject(sourceString) {
       return [key.trim(), value.trim()];
     }
   });
-
-  for (let i = 0; i < temp.length; i++) {
-    if (temp[i] === undefined) {
-      continue;
+  
+  temp.forEach((item) => {
+    if (item) {
+      stylesObject[item[0]] = item[1];
     }
-    stylesObject[temp[i][0]] = temp[i][1];
   }
+  );
 
   return stylesObject;
 }
