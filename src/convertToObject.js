@@ -6,7 +6,7 @@
  * @return {object}
  */
 function convertToObject(sourceString) {
-  const result = {};
+  const stylesObject = {};
 
   const temp = sourceString.split(';').map((word) => {
     const [key, value] = word.split(':');
@@ -20,10 +20,10 @@ function convertToObject(sourceString) {
     if (temp[i] === undefined) {
       continue;
     }
-    result[temp[i][0]] = temp[i][1];
+    stylesObject[temp[i][0]] = temp[i][1];
   }
 
-  return result;
+  return stylesObject;
 }
 
 module.exports = convertToObject;
